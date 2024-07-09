@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+           display: grid;
+           grid-template-columns: 150px 50px 180px 350px 150px;
+           grid-template-rows: 120px 120px 120px 120px;
+           gap: 3px;
+
+        }
+        .item{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+        }
+        .one{
+            background-color: pink;
+        }
+        .two{
+            background-color: blueviolet;
+            grid-area: 1 / 2 / 3 / 4;
+        }
+        .three{
+            background-color: orange;
+            grid-area: 1 / 4 / 5 / 5;
+            font-size: 40px;
+            
+        }
+        .four{
+            background-color: yellow;
+        }
+        .five{
+            background-color: green;
+        }
+        .six{
+            background-color: sienna;
+        }
+        .seven{
+            background-color: seagreen;
+        }
+        .eight{
+            background-color: greenyellow;
+        }
+        .nine{
+            background-color: skyblue;
+        }
+        .ten{
+            background-color: olive;
+        }
+        .eleven{
+            background-color: purple;
+            grid-column: span 3;
+        }
+        .twelve{
+            background-color: red;
+        }
+        @media ( max-width : 400px ){
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="item one">1</div>
+       <div class="item two">2</div>
+       <div class="item three">CSS Grid Layout</div>
+       <div class="item four">4</div>
+       <div class="item five">5</div>
+       <div class="item six">6</div>
+       <div class="item seven">7</div>
+       <div class="item eight">8</div>
+       <div class="item nine">9</div>
+       <div class="item ten">10</div>
+       <div class="item eleven">11</div>
+       <div class="item twelve">12</div>
+    </div>
+</body>
+</html>
